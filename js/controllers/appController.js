@@ -1,16 +1,16 @@
 'use strict';
 
 app.controller('appController',
-    function ($scope) {
+    function ($scope, appService) {
 
         //VM initialization
-        $scope.hello = "Hello World!";
-        $scope.count = 0;
+        $scope.hello = appService.getHello;
+        $scope.count = appService.getInitialCount;
 
         //application logic
         $scope.addCount = function () {
-            //this could be a service call to execute business logic
-            $scope.count++;
+            //call service layer to execute business logic
+            $scope.count = appService.addCount($scope.count);
         }
     }
 );
