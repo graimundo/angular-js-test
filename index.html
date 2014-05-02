@@ -3,6 +3,7 @@
 <head>
     <title>Angular JS Test</title>
     <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-resource.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/appController.js"></script>
     <script src="js/services/appService.js"></script>
@@ -10,7 +11,9 @@
 <body>
     <div data-ng-controller="appController">
         {{hello}}, {{count}}<br/>
-        <button data-ng-click="addCount()">Add Count</button>
+        <button data-ng-click="addCount()">Add Count</button><br/>
+        <h1>Plugin List</h1>
+        {{plugins}}
     </div>
 </body>
 </html>

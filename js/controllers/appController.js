@@ -6,6 +6,7 @@ app.controller('appController',
         //VM initialization
         $scope.hello = appService.getHello;
         $scope.count = appService.getInitialCount;
+        $scope.plugins = appService.getPlugins();
 
         //application logic
         $scope.addCount = function () {
