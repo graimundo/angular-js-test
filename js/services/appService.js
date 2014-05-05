@@ -10,7 +10,7 @@ app.factory('appService', function($resource) {
             return currentCount;
         },
         getPlugins: function() {
-            var restEndpoint = $resource('http://localhost:8080/pentaho/plugin/marketplace/api/plugins');
+            var restEndpoint = $resource('/pentaho/plugin/marketplace/api/plugins');
             var plugins = restEndpoint.get();
             return plugins;
         }
