@@ -1,6 +1,14 @@
 'use strict';
 
-var app = angular.module('app', ['ngResource']);
+var app = angular.module('app', ['ngResource', 'ngRoute']);
+
+app.config(function($routeProvider) {
+   $routeProvider.when('/plugins',
+       {
+           templateUrl: 'partials/plugin-list.html',
+           controller: 'appController'
+       });
+});
 
 //enable CORS in Angular http requests
 /*app.config(['$httpProvider', function($httpProvider) {
