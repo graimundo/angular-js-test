@@ -1,4 +1,8 @@
 <div>
     <h1>Plugin List</h1>
-    {{plugins}}
+    <ul>
+        <li data-ng-repeat="plugin in pluginList.plugins">
+            {{plugin.name}}
+        </li>
+    </ul>
 </div>

@@ -11,8 +11,7 @@ app.factory('appService', function($resource) {
         },
         getPlugins: function() {
             var restEndpoint = $resource('/pentaho/plugin/marketplace/api/plugins');
-            var plugins = restEndpoint.get();
-            return plugins;
+            return restEndpoint.get();
         }
     }
 });
