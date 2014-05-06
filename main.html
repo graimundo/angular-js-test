@@ -6,6 +6,7 @@
     <script src="lib/angular-resource.min.js"></script>
     <script src="lib/angular-route.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/services/navigationService.js"></script>
     <script src="js/controllers/appController.js"></script>
     <script src="js/services/appService.js"></script>
 </head>
@@ -13,8 +14,16 @@
     <div data-ng-controller="appController">
         {{hello}}, {{count}}<br/>
         <button data-ng-click="addCount()">Add Count</button><br/>
-        <a href="#/plugins">Get plugins</a>
+
+        <!-- href doesn't work with programmatic routes, because HTML defines a particular action for a link (i.e., navigation) -->
+        <!-- using programmatic routes with HREF only works in HTML5 mode, otherwise it will switch route twice (one for the HREF, the other using the location service) -->
+        <a href="{{pluginsRoute}}">Get plugins via constant</a>
+        <br/>
+
+        <!-- buttons do, because HTML does not define a particular action from a button -->
+        <button data-ng-click="getPluginsRoute()">Get plugins programatically</button>
     </div>
+
     <data-ng-view></data-ng-view>
 </body>
 </html>
