@@ -3,7 +3,11 @@
 var app = angular.module('app', ['ngResource', 'ngRoute']);
 
 app.config(function($routeProvider) {
-   $routeProvider.when('/plugins',
+    $routeProvider.when('/',
+        {
+            controller: 'appController'
+        });
+    $routeProvider.when('/plugins',
        {
            templateUrl: 'partials/plugin-list.html',
            controller: 'appController'
@@ -12,6 +16,10 @@ app.config(function($routeProvider) {
         {
             templateUrl: 'partials/plugin-detail.html',
             controller: 'appController'
+        });
+    $routeProvider.otherwise(
+        {
+            redirectTo: '/'
         });
 });
 
