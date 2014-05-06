@@ -5,6 +5,7 @@ app.directive('pluginList', function() {
         restrict: 'E',
         replace: true, //replaces the custom directive element with the corresponding expanded HTML, to be HTML-compliant.
         templateUrl: 'directives/pluginList/pluginListTemplate.html',
+        controller: 'pluginListController',
         //isolate scope
         scope: {
             plugins: "=",
