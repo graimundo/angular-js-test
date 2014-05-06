@@ -12,6 +12,9 @@ app.directive('pluginList', function() {
             pluginRoute: "=",
             //getPluginRoute matches get-plugin-route in html template
             //we could use a different name for the html attribute, using "=html-property" instead of "="
+            //'&' evaluates in the parent scope
+            //'@' evaluates as a string
+            //'=' evaluates in the isolate scope
             getPluginRoute: "="
         }
     };
