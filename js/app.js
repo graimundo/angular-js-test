@@ -8,6 +8,11 @@ app.config(function($routeProvider) {
            templateUrl: 'partials/plugin-list.html',
            controller: 'appController'
        });
+    $routeProvider.when('/plugin/:pluginId',
+        {
+            templateUrl: 'partials/plugin-detail.html',
+            controller: 'appController'
+        });
 });
 
 //enable CORS in Angular http requests

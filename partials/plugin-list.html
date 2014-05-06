@@ -2,7 +2,9 @@
     <h1>Plugin List</h1>
     <ul>
         <li data-ng-repeat="plugin in pluginList.plugins">
-            {{plugin.name}}
+            <a href="#/plugin/{{plugin.id}}">
+                {{plugin.name}}
+            </a>
         </li>
     </ul>
 </div>
