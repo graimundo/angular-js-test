@@ -17,11 +17,6 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: 'partials/plugin-detail.html',
             controller: 'appController'
         });
-    $routeProvider.when('/xpto',
-        {
-            templateUrl: 'partials/show-xpto.html',
-            controller: 'appController'
-        });
     $routeProvider.otherwise(
         {
             redirectTo: '/'
